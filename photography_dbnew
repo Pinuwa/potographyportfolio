@@ -1,0 +1,75 @@
+-- MySQL dump 10.10
+--
+-- Host: 127.0.0.1    Database: photography_db
+-- ------------------------------------------------------
+-- Server version	8.0.31
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `customer_details`
+--
+
+DROP TABLE IF EXISTS `customer_details`;
+CREATE TABLE `customer_details` (
+  `id` int auto_increment,
+  `name` varchar(255),
+  `email` varchar(255),
+  `phone` varchar(20),
+  `message` text,
+  PRIMARY KEY (`id`)
+)/*! engine=MyISAM */;
+
+--
+-- Dumping data for table `customer_details`
+--
+
+
+/*!40000 ALTER TABLE `customer_details` DISABLE KEYS */;
+LOCK TABLES `customer_details` WRITE;
+INSERT INTO `customer_details` VALUES (1,'Rashintha Wanigasekara','rashinthawanigasekara@gmail.com','0789498725','asdasdasd'),(2,'Dilusha Jayanidu','dilushajayanidu67@gmail.com','0778963257','I want to hire you for My Wedding for photography event with pre shoot'),(5,'Ronil Wanigasekara','southerngraphics@gmail.com','0716606608','I want to hire you for the my opening store'),(4,'Buddhini Daskara','buddhinidaskara@gmail.com','0778962145','I want to hire you for the my Graduate photo shoot'),(6,'Ronil Wanigasekara','southerngraphics@gmail.com','0716606608','I want to hire you for the my opening store');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `customer_details` ENABLE KEYS */;
+
+--
+-- Table structure for table `projects`
+--
+
+DROP TABLE IF EXISTS `projects`;
+CREATE TABLE `projects` (
+  `id` int auto_increment,
+  `title` varchar(255),
+  `description` text,
+  `images` blob,
+  PRIMARY KEY (`id`)
+)/*! engine=MyISAM */;
+
+--
+-- Dumping data for table `projects`
+--
+
+
+/*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+LOCK TABLES `projects` WRITE;
+INSERT INTO `projects` VALUES (1,'Traveling Sigiriya','Sigiriya, also known as the Lion Rock, is a UNESCO World Heritage Site located in the central Matale District of Sri Lanka. It is one of the country\'s most iconic landmarks and a popular tourist destination. Sigiriya is famous for its ancient rock fortress, which dates back to the 5th century AD. The site holds historical, cultural, and archaeological significance. The fortress was built by King Kashyapa I as a royal palace complex atop a massive 200-meter-high rock. It is surrounded by lush greenery and offers stunning panoramic views of the surrounding landscape. One of the notable features of Sigiriya is the entrance, known as the Lion Gate. Originally, there was a massive lion-shaped structure with a grand staircase leading to the summit. Unfortunately, only the paws of the lion remain today. The climb to the top of the rock involves ascending through a series of staircases, pathways, and ancient frescoes.\r\n\r\nThe highlight of Sigiriya is the Sigiriya Frescoes, a collection of well-preserved ancient paintings found on the rock face. These colorful frescoes depict celestial maidens and showcase the artistic skills of the ancient inhabitants of Sigiriya. As visitors reach the summit, they encounter the remnants of the royal palace complex, including the King\'s throne, swimming pool, gardens, and other architectural marvels. The site also features an ancient irrigation system that demonstrates the advanced engineering skills of its builders. Sigiriya holds immense historical and cultural value. It provides insights into the ancient civilization of Sri Lanka and its architectural achievements. The combination of natural beauty, historical significance, and breathtaking views makes Sigiriya a must-visit destination for travelers exploring Sri Lanka.','uploads/IMG_20230312_120505.jpg'),(2,'ABOUT DAMBULLA CAVE TEMPLE','Dambulla is the largest and best-preserved cave temple complex in Sri Lanka. The rock towers 160 m over the surrounding plains. There are more than 80 documented caves in the surrounding area. Major attractions are spread over five caves, which contain statues and paintings. These paintings and statues are related to Gautama Buddha and his life. There are a total of 153 Buddha statues, three statues of Sri Lankan kings and four statues of gods and goddesses. The latter include Vishnu and the Ganesha. The murals cover an area of 2,100 square metres (23,000 sq ft). Depictions on the walls of the caves include the temptation by the demon Mara, and Buddha\'s first sermon.\r\n\r\nThis temple complex dates back to the first century BCE.[2] It has five caves under a vast overhanging rock, carved with a drip line to keep the interiors dry. In 1938 the architecture was embellished with arched colonnades and gabled entrances. Inside the caves, the ceilings are painted with intricate patterns of religious images following the contours of the rock. There are images of the Lord Buddha and bodhisattvas, as well as various gods and goddesses. The Dambulla cave monastery is still functional and remains the best-preserved ancient edifice in Sri Lanka. This complex dates from the third and second centuries BC, when it was already established as one of the largest and most important monasteries. Valagamba of Anuradhapura is traditionally thought to have converted the caves into a temple in the first century BC. Exiled from Anuradhapura, he sought refuge here from South Indian usurpers for 15 years. After reclaiming his capital, the King built a temple in thankful worship. Many other kings added to it later and by the 11th century, the caves had become a major religious centre and still are. Nissanka Malla of Polonnaruwa gilded the caves and added about 70 Buddha statues in 1190. During the 18th century, the caves were restored and painted by the Kingdom of Kandy.','uploads/IMG_20230313_150122.jpg'),(3,'Tissamaharama Temple','The Tissamaharama Temple, one of the four main monasteries in Sri Lanka, was consecrated by the Supreme Buddha himself. Tissamaharama Stupa is the largest stupa in the southern region measuring 156 feet and 550 feet in circumference. According to ancient chronicles, this stupa was built by King Kavantissa who ruled Ruhuna in the 1st century BC. It is believed that the stupa was built by the local Mahanaga king in the 3rd century BC and that King Kavantissa enlarged the temple.\r\n\r\nProminent resident Buddhist monks of this monastery are Arhant Mahasiva Thera, Arhant Dhammadinna Thera, and Arhant Pindapatika Tissa Thera. King Kavan Tissa, who started the Tissamaharama Temple, changed the Tissa Wewa to meet the water needs of the Tissamaharama Temple as well as to irrigate the surrounding area. Many ancient kings of Sri Lanka had given lands to the Tissamaharama Monastery for the welfare of the Buddhist monks who lived there. From the 3rd century to the 5th century, the monastery owned more than 18,000 acres of land. These lands were donated by the kings for the maintenance of the monastery and the stupa as well as for the needs of the resident monks.','uploads/IMG_20230416_192824.jpg'),(4,'Wildlife Photography','Wildlife photography is an exhilarating and awe-inspiring form of art that captures the beauty, diversity, and raw essence of the natural world. It requires immense patience, skill, and a deep understanding of animal behavior and habitats. In the realm of wildlife photography, every frame tells a story. It is a dance with nature, where the photographer becomes an observer, seeking the perfect moment to freeze in time. The lens becomes a portal, revealing the intimate details of a lion\'s majestic mane, a soaring eagle in flight, or the tender bond between a mother and her newborn. Creativity plays a pivotal role in wildlife photography. It is not solely about capturing technically flawless images, but also about conveying emotion and evoking a connection with the viewer. It is about finding unique angles, experimenting with composition, and using light to accentuate the subject\'s innate beauty. It is in the subtle play of light and shadow, the harmony of colors, and the juxtaposition of elements that the magic of wildlife photography unfolds.','uploads/IMG_20230428_225356.jpg');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `projects` ENABLE KEYS */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
